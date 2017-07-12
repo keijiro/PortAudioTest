@@ -99,6 +99,7 @@
   <ItemGroup>
     <ClInclude Include="PortAudio\include\pa_win_wasapi.h" />
     <ClInclude Include="PortAudio\include\portaudio.h" />
+    <ClInclude Include="Source\BiquadFilter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

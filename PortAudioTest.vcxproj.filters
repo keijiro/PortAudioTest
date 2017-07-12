@@ -89,5 +89,8 @@
     <ClInclude Include="PortAudio\include\portaudio.h">
       <Filter>Header Files\PortAudio</Filter>
     </ClInclude>
+    <ClInclude Include="Source\BiquadFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
