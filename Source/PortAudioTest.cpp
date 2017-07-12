@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 #include "portaudio.h"
-#define NUM_SECONDS   (2)
+#define NUM_SECONDS   (4)
 #define SAMPLE_RATE   (48000)
 
 typedef struct
 {
-	float left_phase;
-	float right_phase;
+	float phase;
 }
 paTestData;
 
@@ -29,14 +28,9 @@ static int patestCallback(const void *inputBuffer, void *outputBuffer,
 
 	for (i = 0; i<framesPerBuffer; i++)
 	{
-		*out++ = data->left_phase;  /* left */
-		*out++ = data->right_phase;  /* right */
-									 /* Generate simple sawtooth phaser that ranges between -1.0 and 1.0. */
-		data->left_phase += 0.01f;
-        data->right_phase += 0.01f;
-        /* When signal reaches top, drop back down. */
-		if (data->left_phase >= 1.0f) data->left_phase -= 2.0f;
-		if (data->right_phase >= 1.0f) data->right_phase -= 2.0f;
+        float mul = powf(2.0f, floorf(data->phase));
+		*out++ = *out++ = sinf(440.0f * 3.141592f * mul * data->phase) * 0.71f;
+        data->phase += 1.0f / SAMPLE_RATE;
 	}
 	return 0;
 }
@@ -51,7 +45,7 @@ int main(void)
 
 	printf("PortAudio Test: output sawtooth wave.\n");
 	/* Initialize our data for use by callback. */
-	data.left_phase = data.right_phase = 0.0;
+	data.phase = 0.0;
 	/* Initialize library before making any other calls. */
 	err = Pa_Initialize();
 	if (err != paNoError) goto error;
