@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\PortAudio">
+      <UniqueIdentifier>{7df1ffa2-9e2d-4e85-9001-508f65dd7b43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PortAudio\common">
+      <UniqueIdentifier>{03533c74-7e50-4674-af5f-452d37a05f14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PortAudio\os">
+      <UniqueIdentifier>{7adffa69-90a3-4f04-a28b-f4cfd78fc108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PortAudio\os\win">
+      <UniqueIdentifier>{510e7cd9-f995-4c71-adee-83e9f58b5948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PortAudio\hostapi">
+      <UniqueIdentifier>{e5dfcd4f-c0ca-4070-86aa-99ea1c887258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PortAudio\hostapi\wasapi">
+      <UniqueIdentifier>{5d18a269-36c8-4b04-b33e-296c81349d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PortAudio">
+      <UniqueIdentifier>{ae0c3707-db5b-4457-af17-6bea085cca2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\PortAudioTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_allocation.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_converters.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_cpuload.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_debugprint.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_dither.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_front.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_process.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_ringbuffer.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_stream.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\common\pa_trace.c">
+      <Filter>Source Files\PortAudio\common</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\os\win\pa_win_coinitialize.c">
+      <Filter>Source Files\PortAudio\os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\os\win\pa_win_hostapis.c">
+      <Filter>Source Files\PortAudio\os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\os\win\pa_win_util.c">
+      <Filter>Source Files\PortAudio\os\win</Filter>
+    </ClCompile>
+    <ClCompile Include="PortAudio\hostapi\wasapi\pa_win_wasapi.c">
+      <Filter>Source Files\PortAudio\hostapi\wasapi</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PortAudio\include\pa_win_wasapi.h">
+      <Filter>Header Files\PortAudio</Filter>
+    </ClInclude>
+    <ClInclude Include="PortAudio\include\portaudio.h">
+      <Filter>Header Files\PortAudio</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
