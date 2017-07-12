@@ -52,7 +52,7 @@ namespace
             2,          // stereo output
             paFloat32,  // 32 bit floating point output
             kSampleRate,
-            1024,        // frames per buffer
+            paFramesPerBufferUnspecified,
             TesterCallback,
             &tester
         );
